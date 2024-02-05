@@ -25,33 +25,9 @@ int main()
     {
         y[l] = b[l] * a[1];
     }
-
-    int X = (x[2] - (y[2])) / ((x[0] - (y[0])) + (x[1] - (y[1])));
+    int X = ((x[2] - (y[2])) + (x[1] - (y[1]))) / (x[0] - (y[0]));
     printf("%d ", X);
-    for (int m = 0; m < 3; m++)
-    {
-        x[m] = a[m] * b[1];
-    }
-    for (int n = 0; n < 3; n++)
-    {
-        y[n] = b[n];
-        // printf("%d\n", y[n]);
-    }
-    // printf("%d\n", y[2]);
-    // printf("Hello Fucking World");
-    int Yval;
-    int Y_val;
-    int Final_Yval;
-    Yval = (x[0] + y[0]) + (x[1] + y[1]);
-    Y_val = (x[2] + y[2]);
-    // printf("%d",Yval);
-    // printf("%d",Y_val);
-    Final_Yval = Y_val / Yval;
-    printf("%d", Final_Yval);
-    // printf("%d %d %d\n", x[0], x[1], x[2]);
-    // printf("%d %d %d\n", y[0], y[1], y[2]);
-    // printf("%d %d %d\n", -(y[0]), -(y[1]), -(y[2]));
-    // printf("%d\n", Yval);
-
+    int Y = a[2] - ((a[0] * X));
+    printf("%d", Y / a[1]);
     return 0;
 }

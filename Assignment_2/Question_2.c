@@ -41,4 +41,6 @@ int main()
     }
 
     printf("%d", count_4);
+    free(ptr);
+    return 0;
 }
