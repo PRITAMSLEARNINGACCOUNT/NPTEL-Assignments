@@ -11,7 +11,14 @@ void Traversal(struct Node *Copy)
 {
     while (Copy != NULL)
     {
-        printf("%d\n", Copy->data);
+        if (Copy->Next == NULL)
+        {
+            printf("%d", Copy->data);
+        }
+        else
+        {
+            printf("%d,", Copy->data);
+        }
         Copy = Copy->Next;
     }
 }
